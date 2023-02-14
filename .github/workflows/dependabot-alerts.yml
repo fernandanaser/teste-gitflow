@@ -6,7 +6,7 @@ jobs:
   dependabot:
     runs-on: ubuntu-latest
     steps:
-      - uses: dependabot/dependabot-core@0.215.0
+      - uses: dependabot/dependabot-core@v2
         with:
           directory: "/"
           github_token: ${{ secrets.GITHUB_TOKEN }}
