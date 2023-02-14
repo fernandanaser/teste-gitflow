@@ -1,13 +1,15 @@
-name: Dependabot Alerts
+name: Dependabot
+
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
 jobs:
   dependabot:
     runs-on: ubuntu-latest
     steps:
-      - uses: dependabot/dependabot-core@v2
+      - name: Dependabot
+        uses: dependabot/dependabot-github-action@v2.5.17
         with:
-          directory: "/"
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          ignore: "all"
